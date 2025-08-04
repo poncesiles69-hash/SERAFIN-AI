@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paraty Essencial Tours</title>
+  <style>
+    /* Estilos básicos para layout e aparência */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header.hero {
+      height: 100vh;
+      background: linear-gradient(to bottom, #003366, #66aaff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header.hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+    header.hero .cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header.hero .cta a {
+      background: #ffa500;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .passeios {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .passeio-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      width: 300px;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .passeio-card h3 {
+      margin-top: 0;
+    }
+    .passeio-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .passeio-card button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    /* Estilos para a área de reserva rápida */
+    #reserva {
+      background: #f7f7f7;
+    }
+    .form-step {
+      display: none;
+    }
+    .form-step.active {
+      display: block;
+    }
+    .form-navigation {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-navigation button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      padding: 20px;
+    }
+    footer a {
+      color: #66aaff;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="home">
+    <h1>Explore Paraty com estilo</h1>
+    <p>Explore Paraty com estilo – a bordo das escunas mais completas da baía!</p>
+    <div class="cta">
+      <a href="#reserva">Reserve agora</a>
+      <a href="#passeios">Veja os passeios</a>
+      <a href="#video">Veja o vídeo</a>
+    </div>
+  </header>
+  <section id="passeios">
+    <h2 class="section-title">Nossos Passeios</h2>
+    <div class="passeios">
+      <!-- Cartões de passeio -->
+      <div class="passeio-card">
+        <img src="placeholder.jpg" alt="Escuna Aquamarina I">
+        <h3>Escuna Aquamarina I</h3>
+        <p>Descubra as ilhas mais lindas a bordo da escuna Aquamarina I.</p>
+        <button onclick="window.location.hash='#reserva';">Reservar Agora</button>
+      </div>
+      <div class="passeio-card">
+        <img src="placeholder.jpg" alt="Escuna Aquamarina II">
+        <h3>Escuna Aquamarina II</h3>
+        <p>Uma aventura inesquecível na baía de Paraty com a Aquamarina II.</p>
+        <button onclick="window.location.hash='#reserva';">Reservar Agora</button>
+      </div>
+      <div class="passeio-card">
+        <img src="placeholder.jpg" alt="Passeio de Jeep">
+        <h3>Passeio de Jeep</h3>
+        <p>Explore trilhas e cachoeiras em um passeio de Jeep emocionante.</p>
+        <button onclick="window.location.hash='#reserva';">Reservar Agora</button>
+      </div>
+      <div class="passeio-card">
+        <img src="placeholder.jpg" alt="City Tour">
+        <h3>City Tour</h3>
+        <p>Conheça o centro histórico de Paraty com guias experientes.</p>
+        <button onclick="window.location.hash='#reserva';">Reservar Agora</button>
+      </div>
+    </div>
+  </section>
+  <section id="sobre">
+    <h2 class="section-title">Sobre Nós</h2>
+    <p>Com mais de 15 anos de experiência, oferecemos escunas modernas, tripulação treinada, internet via Starlink e compromisso com a sustentabilidade.</p>
+    <ul>
+      <li>+15 anos de experiência</li>
+      <li>Tripulação treinada</li>
+      <li>Escunas modernas e seguras</li>
+      <li>Internet via Starlink</li>
+      <li>Práticas sustentáveis</li>
+    </ul>
+  </section>
+  <section id="depoimentos">
+    <h2 class="section-title">Depoimentos</h2>
+    <p>"Uma experiência inesquecível! Recomendo a todos!" – Cliente satisfeito</p>
+    <p>"O melhor passeio de barco de Paraty!" – Visitante feliz</p>
+  </section>
+  <section id="galeria">
+    <h2 class="section-title">Galeria</h2>
+    <p>(Imagens e vídeos dos passeios serão exibidos aqui.)</p>
+  </section>
+  <section id="faq">
+    <h2 class="section-title">FAQ</h2>
+    <details>
+      <summary>Como funciona o embarque?</summary>
+      <p>O embarque ocorre no cais da avenida principal 30 minutos antes do horário marcado.</p>
+    </details>
+    <details>
+      <summary>O que levar?</summary>
+      <p>Leve roupas leves, protetor solar e disposição para se divertir!</p>
+    </details>
+    <details>
+      <summary>Política de cancelamento?</summary>
+      <p>Cancelamentos até 24 horas antes do passeio têm reembolso integral.</p>
+    </details>
+    <details>
+      <summary>Passeio com crianças?</summary>
+      <p>Sim! Temos estrutura para receber crianças com conforto e segurança.</p>
+    </details>
+  </section>
+  <section id="reserva">
+    <h2 class="section-title">Reserva Rápida</h2>
+    <form id="reserva-form">
+      <div class="form-step active" id="step1">
+        <h3>Escolha do passeio e data</h3>
+        <label for="passeio">Passeio:</label>
+        <select id="passeio" required>
+          <option value="">Selecione</option>
+          <option value="aquamarina1">Escuna Aquamarina I</option>
+          <option value="aquamarina2">Escuna Aquamarina II</option>
+          <option value="jeep">Passeio de Jeep</option>
+          <option value="citytour">City Tour</option>
+        </select><br>
+        <label for="data">Data:</label>
+        <input type="date" id="data" required><br>
+      </div>
+      <div class="form-step" id="step2">
+        <h3>Quantidade de pessoas e opções</h3>
+        <label for="quantidade">Quantidade de pessoas:</label>
+        <input type="number" id="quantidade" min="1" max="20" required><br>
+        <label><input type="checkbox" id="almoco"> Almoço incluído</label><br>
+        <label><input type="checkbox" id="fotos"> Pacote de fotos</label><br>
+      </div>
+      <div class="form-step" id="step3">
+        <h3>Pagamento</h3>
+        <p>Escolha o método de pagamento:</p>
+        <label><input type="radio" name="pagamento" value="cartao-internacional" required> Cartão Internacional</label><br>
+        <label><input type="radio" name="pagamento" value="cartao-nacional" required> Cartão Nacional</label><br>
+        <label><input type="radio" name="pagamento" value="pix" required> PIX</label><br><br>
+        <div id="payment-fields">
+          <!-- Campos de pagamento serão adicionados aqui dinamicamente -->
+        </div>
+      </div>
+      <div class="form-navigation">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
+      </div>
+    </form>
+    <div id="reserva-completa" style="display:none;">
+      <h3>Reserva concluída!</h3>
+      <p>Obrigado por escolher Paraty Essencial Tours. Entraremos em contato para confirmar os detalhes.</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Paraty Essencial Tours. Todos os direitos reservados.</p>
+    <p><a href="#home">Home</a> | <a href="#passeios">Passeios</a> | <a href="#reserva">Reservar</a> | <a href="https://wa.me/">WhatsApp</a></p>
+    <p>Contato: contato@paratyessencialtours.com | (99) 99999-9999</p>
+    <p>Certificado CADASTUR</p>
+  </footer>
+<script>
+  let currentStep = 0;
+  function showStep(n) {
+    const steps = document.querySelectorAll('.form-step');
+    steps.forEach((step, index) => {
+      step.classList.toggle('active', index === n);
+    });
+    document.getElementById('prevBtn').style.display = n === 0 ? 'none' : 'inline-block';
+    document.getElementById('nextBtn').textContent = n === (steps.length - 1) ? 'Finalizar' : 'Próximo';
+  }
+  function nextPrev(n) {
+    const steps = document.querySelectorAll('.form-step');
+    // Validação do passo atual
+    if (n === 1 && !validateForm()) return false;
+    // Oculta passo atual
+    steps[currentStep].classList.remove('active');
+    currentStep = currentStep + n;
+    if (currentStep >= steps.length) {
+      document.getElementById('reserva-form').style.display = 'none';
+      document.getElementById('reserva-completa').style.display = 'block';
+      return false;
+    }
+    showStep(currentStep);
+  }
+  function validateForm() {
+    // Validação simples: verifica se inputs obrigatórios no passo atual estão preenchidos
+    const activeStep = document.querySelector('.form-step.active');
+    const inputs = activeStep.querySelectorAll('input, select');
+    for (const input of inputs) {
+      if (input.hasAttribute('required')) {
+        if (input.type === 'radio' || input.type === 'checkbox') {
+          const group = document.querySelectorAll(`input[name="${input.name}"]:checked`);
+          if (group.length === 0) {
+            alert('Por favor preencha todos os campos.');
+            return false;
+          }
+        } else if (!input.value) {
+          alert('Por favor preencha todos os campos.');
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+  // Campos dinâmicos do método de pagamento
+  document.querySelectorAll('input[name="pagamento"]').forEach((el) => {
+    el.addEventListener('change', (e) => {
+      const paymentFields = document.getElementById('payment-fields');
+      paymentFields.innerHTML = '';
+      if (e.target.value === 'cartao-internacional' || e.target.value === 'cartao-nacional') {
+        const cardNumber = document.createElement('input');
+        cardNumber.type = 'text';
+        cardNumber.placeholder = 'Número do cartão';
+        cardNumber.required = true;
+        paymentFields.appendChild(cardNumber);
+        const expiry = document.createElement('input');
+        expiry.type = 'text';
+        expiry.placeholder = 'Validade (MM/AA)';
+        expiry.required = true;
+        paymentFields.appendChild(expiry);
+        const cvv = document.createElement('input');
+        cvv.type = 'password';
+        cvv.placeholder = 'CVV';
+        cvv.required = true;
+        paymentFields.appendChild(cvv);
+      } else if (e.target.value === 'pix') {
+        const pixKey = document.createElement('input');
+        pixKey.type = 'text';
+        pixKey.placeholder = 'Chave PIX';
+        pixKey.required = true;
+        paymentFields.appendChild(pixKey);
+      }
+    });
+  });
+  // Inicialização do passo inicial
+  showStep(currentStep);
+</script>
+</body>
+</html>
